@@ -18,11 +18,11 @@ public class Servlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         out.println("<h1>" + TEXT_MESSAGE + "</h1>");
-        String param = req.getParameter("pseudo");
-        out.println("Bonjour "+ param + " ! </br>");
-        req.setAttribute(LOGIN_TIME_PARAMETER_NAME, loginTime);
-        HttpSession httpSession = req.getSession();
-        Long heureConnexion = httpSession.getCreationTime();
+        final String paramPseudo = req.getParameter("pseudo");
+        out.println("Bonjour "+ paramPseudo + " ! </br>");
+        // req.setAttribute(LOGIN_TIME_PARAMETER_NAME, loginTime);
+        final HttpSession session = req.getSession();
+        Long heureConnexion = session.getCreationTime();
         out.println("Heure de connexion:  "+ heureConnexion);
     }
 }

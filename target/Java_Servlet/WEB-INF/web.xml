@@ -8,8 +8,16 @@
     <servlet-name>simple-servlet</servlet-name>
     <servlet-class>fr.alexis.java_servlet.controller.Servlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>servlet-parameter</servlet-name>
+    <servlet-class>fr.alexis.java_servlet.controller.ParameterServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>simple-servlet</servlet-name>
     <url-pattern>/simple</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>servlet-parameter</servlet-name>
+    <url-pattern>/parameter</url-pattern>
   </servlet-mapping>
 </web-app>
