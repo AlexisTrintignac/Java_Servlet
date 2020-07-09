@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class ParameterServlet extends HttpServlet {
+public class TargetServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -16,10 +16,6 @@ public class ParameterServlet extends HttpServlet {
         final String paramPseudo = req.getParameter("pseudo");
         reporter.setPseudo(paramPseudo);
         req.setAttribute("reporter", reporter);
-        this.getServletContext().getRequestDispatcher( "/WEB-INF/jsp/parameter.jsp" ).forward( req, resp );
-    }
-
-    public void redirection() {
-
+        this.getServletContext().getRequestDispatcher( "/WEB-INF/jsp/target.jsp" ).forward( req, resp );
     }
 }
