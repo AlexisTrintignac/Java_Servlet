@@ -3,6 +3,6 @@
 <%@page isELIgnored="false" %>
 <html>
     <body>
-        <h2>Bonjour ${reporter.pseudo} !</h2>
+        <h2>Bonjour ${pseudo} ${mdp} !</h2>
     </body>
 </html>

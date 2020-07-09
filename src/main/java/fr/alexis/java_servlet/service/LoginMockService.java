@@ -15,10 +15,11 @@ public class LoginMockService {
 
     public boolean isAllowedToLogOn(String identifiant, String mdp) {
         if (this.accountList.containsKey(identifiant)) {
-            if (this.accountList.get(identifiant) == mdp) {
+            if (this.accountList.get(identifiant).equals(mdp)) {
                 return true;
             }
         }
         return false;
+        // return (identifiant.equals("Alexis") && mdp.equals("19041999"));
     }
 }
